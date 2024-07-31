@@ -40,3 +40,7 @@ Improve error handling and logging.
 
 3. **Integrate Continuous Integration (CI):**
 Set up CI/CD pipelines with GitHub Actions, Travis CI, or Jenkins to automate test runs.
+
+4. **Add Unit Testing for Utilities:**
+Implement unit tests for the methods in the Utilities folder to ensure code reliability and correctness.
+

@@ -2,6 +2,7 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+test_results/
 
 # TypeScript
 *.tsbuildinfo
@@ -10,9 +11,6 @@ build/
 
 # Playwright
 playwright-report/
-
-#test_results
-test_results/
 
 # IDEs
 .vscode/
