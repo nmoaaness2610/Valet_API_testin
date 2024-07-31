@@ -1,0 +1,24 @@
+{
+  "name": "playwright_poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "lint": "eslint '**/*.ts' --fix",
+    "lint:check": "eslint '**/*.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.45.3",
+    "playwright": "^1.45.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.8.0"
+  }
+}

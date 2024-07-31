@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                          // Set the JavaScript language version for emitted JavaScript and include compatible library declarations.
+    "module": "commonjs",                        // Specify what module code is generated.
+    "strict": true,                              // Enable all strict type-checking options.
+    "esModuleInterop": true,                     // Emit additional JavaScript to ease support for importing CommonJS modules.
+    "skipLibCheck": true,                        // Skip type checking of all declaration files (*.d.ts).
+    "forceConsistentCasingInFileNames": true,    // Disallow inconsistently-cased references to the same file.
+    "outDir": "dist",                            // Redirect output structure to the directory.
+    "rootDir": "."                           // Specify the root directory of input files.
+  },
+  "include": ["tests/*.ts"],                  // Include all TypeScript files in the tests directory.
+  "exclude": ["node_modules", "dist"]            // Exclude node_modules and dist directories.
+}
