@@ -8,8 +8,6 @@ export class ForexUtils {
      */
     static parseJsonResponse(jsonResponse: any, seriesName: string): number[] {
         const conversionRates: number[] = [];
-        console.log(jsonResponse, 'response json');
-
         // Check if 'observations' exists in the response and is an array
         if (jsonResponse && Array.isArray(jsonResponse.observations)) {
             console.log('Observations:', jsonResponse.observations); // Debugging line
@@ -70,10 +68,15 @@ export class ForexUtils {
      * @returns The average conversion rate.
      */
     static calculateAverage(rates: number[]) {
-        // TODO:
-        // 1. Check if the array of rates is empty; if it is, return 0 or an appropriate default value.
-        // 2. Calculate the sum of all the values in the array.
-        // 3. Divide the sum by the number of elements in the array to get the average.
-        // 4. Return the calculated average.
+        // Check if the rates array is empty
+        if (rates.length === 0) {
+            return 0; // Return 0 or handle according to your requirements
+        }
+
+        // Calculate the sum of all rates
+        const sum = rates.reduce((accumulator, currentRate) => accumulator + currentRate, 0);
+
+        // Calculate and return the average
+        return sum / rates.length;
     }
 }

@@ -73,7 +73,7 @@ test('Validate the response format', async ({ request }) => {
 
 test('Calculate average Forex conversion rate for CAD to AUD over the last 10 weeks', async ({ request }) => {
   const startDate = HeaderBuilder.setDate('2023-05-15'); // Set the start date
-  const endDate = HeaderBuilder.setDate('2023-07-23'); // Set the end date
+  const endDate = HeaderBuilder.setDate('2023-07-16'); // Set the end date
   const seriesNames = HeaderBuilder.buildSerisename(['AUDCAD']); // Build the series names string
   const url = UrlBuilder.getObservationSeries(seriesNames, 'csv', startDate, endDate); // Construct the URL
 
@@ -82,12 +82,10 @@ test('Calculate average Forex conversion rate for CAD to AUD over the last 10 we
   expect(response.status()).toBe(200);
 
   // Parse CSV response
-  const responseBody = await response.body();
-  const res = ForexUtils.parseJsonResponse(responseBody ,'FXAUDCAD');
-
-  //TODO: validate that the avergae is equal the excpected value 
+  const responseBody = await response;
+  const jsonAnswer = ForexUtils.parseJsonResponse(responseBody ,'FXAUDCAD');
+  const averageRates = ForexUtils.calculateAverage(jsonAnswer)
+  
+  expect(averageRates).toBe(0.99);
   
 });
-
-
-
