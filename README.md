@@ -1,7 +1,7 @@
 # Valet API Testing
 
 ## Description
-Valet API Testing is a project designed for testing the Valet API endpoints using Playwright.
+Valet API Testing is a project designed to test the Valet API endpoints using Playwright.
 
 ## Installation
 
