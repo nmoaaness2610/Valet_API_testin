@@ -20,7 +20,7 @@ Run the Playwright tests with:
 npx playwright test
 ```
 ## Reporting
-The framework provides an HTML report of the test results every time the tests run.
+The framework provides an HTML report using playwright-report of the test results every time the tests run.
 
 ## Observations
 Tests validate API responses, handle incorrect currency codes, and check for future dates.
